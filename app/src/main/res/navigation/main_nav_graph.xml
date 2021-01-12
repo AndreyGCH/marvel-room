@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/marvelListFragment">
+
+    <fragment
+        android:id="@+id/marvelListFragment"
+        android:name="com.loguito.clase6.views.fragments.MarvelListFragment"
+        android:label="fragment_marvel_list"
+        tools:layout="@layout/fragment_marvel_list" >
+        <action
+            android:id="@+id/action_marvelListFragment_to_bottomMenuFragment"
+            app:destination="@id/bottomMenuFragment" />
+        <action
+            android:id="@+id/action_marvelListFragment_to_favListFragment"
+            app:destination="@id/favListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomMenuFragment"
+        android:name="com.loguito.clase6.views.fragments.BottomMenuFragment"
+        android:label="fragment_bottom_menu"
+        tools:layout="@layout/fragment_bottom_menu" />
+    <fragment
+        android:id="@+id/favListFragment"
+        android:name="com.loguito.clase6.views.fragments.FavListFragment"
+        android:label="fragment_fav_list"
+        tools:layout="@layout/fragment_fav_list" />
+</navigation>
